@@ -1,0 +1,53 @@
+.footer {
+    background-color: $back-color;
+    border-top: solid 2px $border-top-title;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+    
+    &__text, &__text-link {
+        font-family: 'TT LAkes';
+        font-weight: normal;
+        color: $title-color;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media (min-width:768px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+        padding-bottom: 25px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        &__text {
+            width: 33%;
+        }
+    
+        &__text:first-child {
+            text-align: left;
+        }
+    
+        &__text:last-child {
+            text-align: right;
+        }
+    }
+
+}
+
+@media (min-width:1120px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+        padding-bottom: 21px;
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+
+}

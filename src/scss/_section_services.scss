@@ -1,0 +1,268 @@
+.section-services {
+  background-color: $back-color;
+  margin-top: 24px;
+
+  &__header {
+    background-image: linear-gradient(to right, $back-color, $white);
+    height: 80px;
+    border-top: solid 2px $border-top-title;
+    padding: 15px;
+  }
+
+  &__title {
+    color: $title-color;
+    font-family: 'TT LAkes';
+    font-weight: normal;
+    display: flex;
+    align-items: left;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+  }
+  &__list {
+    margin-left: 8px;
+    margin-top: 16px;
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 6px;
+    width: 260px;
+    height: 200px;
+    padding: 16px;
+    margin-right: 16px;
+  }
+
+  &__signs {
+    display: none;
+    font-family: 'TT LAkes';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: $title-color;
+  }
+
+  &__description-title {
+    font-family: 'TT LAkes';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: $title-color;
+  }
+
+  &__description-text {
+    font-family: 'TT LAkes';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: $description-text;
+    letter-spacing: 0.2px;
+  }
+  &__description:last-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__btn {
+    border: none;
+    background-color: $pink;
+    border-radius: 16px;
+    width: 119px;
+    height: 32px;
+    font-family: 'TT LAkes';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__btn::after {
+    content: url(../img/arrow.svg);
+  }
+
+  &__information {
+    font-family: 'TT LAkes';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: $description-text;
+    letter-spacing: 0.2px;
+    margin-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__information-btn {
+    background: none;
+    border: none;
+    font-family: 'TT LAkes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $description-text;
+    letter-spacing: 0.2px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+    text-align: left;
+  }
+
+  &__information-btn::after {
+    content: url(../img/arrow-btn-info.svg);
+    padding-left: 12px;
+  }
+}
+
+.description-one {
+  padding-bottom: 16px;
+}
+
+@media (min-width: 320px) {
+  .section-services__content {
+    width: 320px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 360px) {
+  .section-services__content {
+    width: 380px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-services {
+    &__header {
+      height: 56px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 24px;
+    }
+
+    &__signs {
+      display: flex;
+      padding-left: 40px;
+      padding-right: 25px;
+      margin-top: 31px;
+    }
+
+    &__sign:first-child {
+      width: 59%;
+    }
+
+    &__description-title {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      align-items: flex-start;
+    }
+
+    &__content {
+      width: 98%;
+    }
+
+    &__item {
+      width: 98%;
+      margin-left: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: auto;
+      border-radius: 0;
+    }
+
+    &__item:first-child {
+      border-radius: 6px 6px 0 0;
+    }
+
+    &__item:last-child {
+      border-radius: 0 0 6px 6px;
+    }
+    &__description:first-child {
+      width: 50%;
+    }
+
+    &__description:last-child {
+      width: 30%;
+    }
+    &__description-text {
+      margin-bottom: 0;
+    }
+    &__btn {
+      margin-bottom: 0;
+    }
+
+    /*&__item:not(:last-child) {
+      border-bottom: 1px solid $border-item;
+    }*/
+
+    &__item::after {
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      background-color: $border-item;
+      bottom: 0;
+      left: 24px;
+      width: 95%;
+    }
+
+    &__item-last::after {
+      display: none;
+    }
+
+    &__list {
+      margin-left: 0;
+    }
+
+    &__information {
+      padding-left: 24px;
+      max-width: 500px;
+    }
+
+    &__information-btn {
+      padding-left: 24px;
+    }
+  }
+
+  .sign-price {
+    width: 12%;
+  }
+
+  .description-one {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1120px) {
+  .section-services {
+    &__header {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 32px;
+    }
+
+    &__information {
+      padding-left: 32px;
+    }
+
+    &__information-btn {
+      padding-left: 32px;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.section-technic {
+        background-color: $back-color;
+        margin-top: 24px;
+
+    &__header {
+        background-image: linear-gradient(to right, $back-color, $white);
+        height: 80px;
+        border-top: solid 2px $border-top-title;
+        padding: 15px; 
+    }
+
+    &__title {
+        color: $title-color;
+        font-family: 'TT LAkes';
+        font-weight: normal;
+        display: flex;
+        align-items: start;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+    }
+
+    &__link::after {
+        content: url(../img/go.svg);
+        align-self: flex-end;
+    }
+    
+    &__change {
+        display: none;
+    }
+    
+    &__list {
+        padding-left: 16px;
+    }
+    
+    &__item {
+        background-color: $white;
+        border: solid 1px $border-item;
+        border-radius: 6px;
+        height: 160px;
+        width: 224px;
+        margin-right: 16px;
+        margin-top: 16px;
+    }
+    
+    &__link {
+        text-decoration: none;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        display: flex;
+        height: 160px;
+        justify-content: space-between;
+        
+    }
+    
+    &__text {
+        font-family: 'TT LAkes';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $black;
+    }
+    
+    &__change--more {
+        font-family: 'TT LAkes';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        background-color: $back-color;
+        border: none;
+        cursor: pointer;
+        height: 25px;
+    }
+}
+
+
+@media (min-width:320px) {
+    .section-technic__content {
+        max-width: 380px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width:768px) {
+    .section-technic {
+
+        &__header {
+            height: 56px;
+            padding-top: 15px; 
+            padding-bottom: 15px;
+            padding-left: 24px;
+        }
+    
+        &__list {
+            padding-top: 24px;
+            padding-left: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+            height: 176px;
+        }
+    
+        &__item {
+            margin-right: 24px;
+        }
+    
+       
+        &__change {
+            display: flex;
+            margin-left: 24px;
+        }
+        
+        &__change--more::before {
+            content: url(../img/expand.svg);
+        }
+    
+        &__change--open {
+            display: flex;
+        }
+        
+        &__change--open::before  {
+            content: url(../img/expand.svg);
+            transform: translateY(-6px) rotate(180deg);
+            -moz-transform: rotate(180deg);
+        }
+        
+        &__content {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (min-width:1120px) {
+    .section-technic {
+
+        &__header {
+            padding-top: 15px; 
+            padding-bottom: 15px;
+            padding-left: 32px;
+        }
+        
+        &__list {
+            padding-left: 32px;
+        }
+    
+        &__item {
+            margin-right: 32px;
+        }
+    
+    
+        &__change {
+            margin-left: 32px;
+        }
+    
+    
+        &__change--open {
+            display: flex;
+        }
+    }
+}
+

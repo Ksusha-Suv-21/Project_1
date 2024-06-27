@@ -1,0 +1,235 @@
+.aside-menu {
+  background-color: $white;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 19px;
+  }
+
+  &__close-menu {
+    background: url(../img/burger-close.svg) no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    transition-duration: 1s;
+  }
+
+  &__close-menu:hover {
+    transform: scale(1.3);
+  }
+
+  &__search {
+    background: url(../img/search.svg) no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    transition-duration: 1s;
+  }
+  &__search:hover {
+    transform: scale(1.3);
+  }
+
+  &__logo {
+    margin-right: 78px;
+  }
+
+  &__nav {
+    margin-top: 35px;
+  }
+
+  &__nav-link {
+    font-family: 'TT LAkes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-items:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__nav-link:hover {
+    opacity: 0.5;
+    border-left: solid 4px $navigation;
+    margin-left: 0;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+  &__contacts-call {
+    background: url(../img/call.svg) no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__contacts-chat {
+    background: url(../img/chat.svg) no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__contacts-profile {
+    background: url(../img/profile.svg) no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__contacts {
+    display: flex;
+    margin-left: 24px;
+    margin-top: 32px;
+  }
+
+  &__contacts-items:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__contacts-items {
+    transition-duration: 1s;
+  }
+
+  &__contacts-items:hover {
+    transform: scale(1.3);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer-email {
+    font-family: 'TT LAkes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-left: 24px;
+    margin-top: 16px;
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+  }
+
+  &__footer-phone {
+    font-family: 'TT LAkes';
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-left: 24px;
+    margin-top: 16px;
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+  }
+
+  &__footer-language {
+    display: flex;
+    margin-left: 24px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  &__language-button {
+    border: none;
+    background-color: $white;
+    font-family: 'TT LAkes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+  }
+
+  &__language-item:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  &__language-button:hover {
+    opacity: 0.5;
+  }
+}
+
+.aside-visible {
+  display: block;
+  z-index: 21;
+}
+
+.blur {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  opacity: 0.96;
+  z-index: 20;
+}
+
+.blur-work {
+  display: block;
+}
+
+@media (min-width: 320px) {
+  .aside-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 360px) {
+  .aside-menu {
+    width: 360px;
+
+    &__logo {
+      margin-right: 111px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .aside-menu {
+    width: 320px;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+
+    &__contacts {
+      margin-top: 268px;
+    }
+
+    &__logo {
+      margin-right: 78px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .aside-menu {
+    display: block;
+    width: 320px;
+    box-shadow: none;
+    position: relative;
+
+    &__close-menu {
+      display: none;
+    }
+
+    &__logo {
+      margin-right: 118px;
+    }
+  }
+}
